@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title></title>
+	<meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      body{font-family:arial;}
+			.article-item{
+				display: grid;
+				grid-template-columns: 200px 1fr;
+				grid-template-rows:auto 1fr;
+				grid-template-areas: "image title"
+													   "image p";	
+			  column-gap: 16px;		
+				padding:24px; border:solid 1px #000; border-radius:16px;			
+			}
+			img{    grid-area:image; display:block; margin:0;}		
+			.title{ grid-area:title;  margin:0; font-size:30px;}
+			p{      grid-area:p; font-size:24px;}		
+		
+    </style>
+  </head>
+
+  <body>
+		<article class="article-item">			
+			<img
+				src="/src/images/cat-400px.png" width="200"
+				alt="chinese paint"
+				srcset="
+					/src/images/cat-200px.png   1x,
+					/src/images/cat-400px.png   2x,
+					/src/images/cat-600px.png   3x         
+				"
+			/>			
+			<h3 class="title">Sugar Free Cat</h3>
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+		</article>
+</body>
+
+</html>
